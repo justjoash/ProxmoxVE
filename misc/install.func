@@ -47,8 +47,10 @@ set_std_mode() {
 
 # Silent execution function
 silent() {
-  "$@" >/dev/null 2>&1 || echo "Command failed: $@"
+  "$@" || echo "Command failed: $@"  # This will show the command if it fails.
 }
+
+
 
 
 # This function enables IPv6 if it's not disabled and sets verbose mode
