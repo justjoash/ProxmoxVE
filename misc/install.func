@@ -45,6 +45,11 @@ set_std_mode() {
   fi
 }
 
+# Silent execution function
+silent() {
+ "$@" >/dev/null 2>&1
+}
+
 # This function enables IPv6 if it's not disabled and sets verbose mode
 verb_ip6() {
   set_std_mode # Set STD mode based on VERBOSE
